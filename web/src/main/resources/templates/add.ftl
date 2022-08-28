@@ -5,7 +5,7 @@
     <script src="/static/js/jquery-3.6.0.min.js"></script>
     <title>
         <#if user.id ?? && user.id != 0>
-            修改
+            修改1
         <#else>
             添加
         </#if>
