@@ -4,7 +4,8 @@ package dic.mapper;
 
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import dic.entity.Ssmp;
+
+import dic.entity.User;
 import org.springframework.stereotype.Component;
 
 /**
@@ -16,7 +17,7 @@ import org.springframework.stereotype.Component;
  * @since 2021-12-02
  */
 
-public interface SsmpDicMapper extends BaseMapper<Ssmp> {
+public interface SsmpDicMapper extends BaseMapper<User> {
 
 	
 
