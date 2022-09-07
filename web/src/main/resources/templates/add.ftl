@@ -1,6 +1,8 @@
 <html>
+
+
 <head>
-    <script src="/static/js/jquery-3.6.0.min.js"></script>
+    <script src="${ctx.contextPath}/js/jquery-3.6.0.min.js"></script>
     <title>
         <#if user.id ?? && user.id != 0>
             修改
@@ -16,15 +18,15 @@
         <input type="hidden" name="id" value="${user.id}"/>
         <input type="hidden" name="_method" value="PUT"/>
     </#if>
-    <#--    <#if user.id ?? && user.id != 0>-->
-    <img style="width:200px" id="img" src='/picturePreview?id=${user.id}'>
-    <#--    </#if>-->
+    <#if user.id ?? && user.id != 0>
+        <img style="width:200px" id="img" src='http://192.168.1.31/${user.head}/${user.filename}'>
+    </#if>
     <input type="file" onchange="pictureImg(this)" name="picture"><br/>
     name: <input type="text" name="name" value="${(user.name)!}">
     sex: <input type="text" name="sex" value="${user.sex}">
     age: <input type="text" name="age" value="${user.age}">
     email: <input type="text" name="email" value="${(user.email)!}">
-    时间555: <input type="text" name="birthdate" value="<#if user.birthdate??>${user.birthdate?string('yyyy-MM-dd')}</#if>">
+    时间: <input type="text" name="birthdate" value="<#if user.birthdate??>${user.birthdate?string('yyyy-MM-dd')}</#if>">
 
     <input type="submit" value="提交">
 </form>

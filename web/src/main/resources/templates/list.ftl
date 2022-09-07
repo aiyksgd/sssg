@@ -3,7 +3,7 @@
 <head>
 
 
-
+    <script src="${ctx.contextPath}/js/jquery-3.6.0.min.js"></script>
 </head>
 <body>
 
@@ -33,7 +33,7 @@
     <#list list as l>
         <tr>
             <th>${l.id}</th>
-            <th><img src='/picturePreview?id=${l.id}' width='40%'/></th>
+            <th><img src='http://192.168.1.31/${l.head}/${l.filename}' width='40%'/></th>
             <th>${l.name}</th>
             <th><#if l.sex =0 >男<#else >女
                 </#if>
@@ -45,14 +45,14 @@
                 <a class="delete" href="/users/${(l.id)}">删除</a><br/>
                 <a href="/users/${(l.id)}">修改</a>
             </th>
-            <th><a href="/aaaa/${l.id}">下载1111</a></th>
+            <th><a href="/aaaa/${l.id}">下载</a></th>
         </tr>
     </#list>
 </table>
 
 
 <br/>
-<script src="/static/js/jquery-3.6.0.min.js"></script>
+
 <script>
     $(function () {
         $(".delete").click(function () {
@@ -60,6 +60,7 @@
             $("#del").attr("action", href).submit();
             return false;
         });
+
         $("#lang").change(function () {
             var lang = $("#lang").val();
             window.location.href = "i18n?locale=" + lang;
