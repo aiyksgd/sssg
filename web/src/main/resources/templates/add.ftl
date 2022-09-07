@@ -24,7 +24,7 @@
     sex: <input type="text" name="sex" value="${user.sex}">
     age: <input type="text" name="age" value="${user.age}">
     email: <input type="text" name="email" value="${(user.email)!}">
-    时间12: <input type="text" name="birthdate" value="<#if user.birthdate??>${user.birthdate?string('yyyy-MM-dd')}</#if>">
+    时间555: <input type="text" name="birthdate" value="<#if user.birthdate??>${user.birthdate?string('yyyy-MM-dd')}</#if>">
 
     <input type="submit" value="提交">
 </form>

@@ -45,7 +45,7 @@
                 <a class="delete" href="/users/${(l.id)}">删除</a><br/>
                 <a href="/users/${(l.id)}">修改</a>
             </th>
-            <th><a href="/aaaa/${l.id}">下载1</a></th>
+            <th><a href="/aaaa/${l.id}">下载1111</a></th>
         </tr>
     </#list>
 </table>
